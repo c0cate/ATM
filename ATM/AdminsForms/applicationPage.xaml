@@ -1,0 +1,176 @@
+﻿<Page x:Class="ATM.AdminsForms.applicationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ATM.AdminsForms"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="White"
+      Title="applicationPage">
+    <Page.Resources>
+        <!-- Minimalistic ListBox Style -->
+        <Style x:Key="MinimalListBoxStyle" TargetType="ListBox">
+            <Setter Property="Background" Value="#eeeeee"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <!-- Minimalistic ListBoxItem Style -->
+        <Style x:Key="MinimalListBoxItemStyle" TargetType="ListBoxItem">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border Background="{TemplateBinding Background}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Left" 
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="LightGray"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Gainsboro"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Minimalistic Button Style -->
+        <Style x:Key="MinimalButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightGray"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="DarkGray"/>
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!---->
+        <Grid Grid.Column="0" Margin="20,20,10,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+            <!---->
+            <Label Grid.Row="0" Content="Новые заявки" FontSize="16"/>
+            <ListBox Grid.Row="1" x:Name="appsListBox" 
+                     Style="{StaticResource MinimalListBoxStyle}" 
+                     ItemContainerStyle="{StaticResource MinimalListBoxItemStyle}" SelectionChanged="appsListBox_SelectionChanged"/>
+        </Grid>
+        
+        <Grid Grid.Column="1" Margin="10,20,20,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <!---->
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.55*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!---->
+                <Label Grid.Row="0" Content="ФИО" FontSize="16"/>
+                <TextBlock x:Name="fioTB" Grid.Row="1" FontSize="25" Text="ФИО" Margin="0,5,0,10" Background="#eeeeee"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.55*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!---->
+                <Label Grid.Row="0" Content="Стаж работы" FontSize="16"/>
+                <TextBlock x:Name="expTB" Grid.Row="1" FontSize="25" Text="СТАЖ лет" Margin="0,5,0,10" Background="#eeeeee"/>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.55*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!---->
+                <Label Grid.Row="0" Content="Дата рождения" FontSize="15" VerticalContentAlignment="Center"/>
+                <TextBlock x:Name="brthTB" Grid.Row="1" FontSize="25" Text="01.01.0001" Margin="0,5,0,10" Background="#eeeeee"/>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" Margin="0,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.55*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!---->
+                <Label Grid.Row="0" Content="Номер телефона" FontSize="15" VerticalContentAlignment="Center"/>
+                <TextBlock x:Name="phoneTB" Grid.Row="1" FontSize="25" Text="01.01.0001" Margin="0,5,0,10" Background="#eeeeee"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="3" Margin="10,5,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <!---->
+                <Label Grid.Row="0" Content="Подробная информация" FontSize="15" VerticalContentAlignment="Center"/>
+                <TextBlock x:Name="informationTB" TextWrapping="Wrap" Grid.Row="1" FontSize="25" Text="01.01.0001" Margin="0,5,0,10" Background="#eeeeee"/>
+            </Grid>
+            <Grid Grid.Row="4" Grid.Column="1" Margin="10,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!---->
+                <Button Grid.Column="0" Grid.Row="1" Content="Отклонить" VerticalAlignment="Bottom" Margin="0,0,5,0" Style="{StaticResource MinimalButtonStyle}" FontSize="25" Click="Button_Click_1"/>
+                <Button Grid.Column="1" Grid.Row="1" Content="Принять" VerticalAlignment="Bottom" Margin="0,0,5,0" Style="{StaticResource MinimalButtonStyle}" FontSize="25" Click="Button_Click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

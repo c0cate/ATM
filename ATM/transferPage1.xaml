@@ -1,0 +1,83 @@
+﻿<Page x:Class="ATM.transferPage1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ATM"
+      mc:Ignorable="d"
+      Title="Перевод средств" Height="675" Width="1200"
+      Background="White"
+      >
+    <Grid Background="White">
+        <Image Source="D:\!studying\!C#\ATM\ATM\Resources\logo.jpg" Margin="10,-23,885,573"/>
+        <Label Content="Перевод с карты&#xD;&#xA;на карту" FontSize="30" FontWeight="Medium" Margin="10,58,932,503"/>
+        <Label Content="+375 (25) 999-99-69" FontSize="20" FontWeight="Medium" Margin="971,10,0,575"/>
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,550,0,0" CornerRadius="20,20,20,20" Background="#FFCBCBCB" VerticalAlignment="Top" HorizontalAlignment="Left" Height="69" Width="208">
+            <Grid>
+                <Label x:Name="QuitLabel1" FontSize="25" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,1,0,0" Height="39" RenderTransformOrigin="0.499,0.226">Назад</Label>
+                <Label x:Name="QuitLabel" FontSize="18" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0" Height="39" RenderTransformOrigin="0.499,0.226" Foreground="#FF797777">Главное окно</Label>
+            </Grid>
+        </Border>
+        <Button Opacity="0.01" Margin="10,550,982,56" Click="Button_Click_2" />
+        
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,222,0,0" CornerRadius="20,20,20,20" Background="White" VerticalAlignment="Top" HorizontalAlignment="Left" Height="167" Width="208">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="1.8"/>
+            </Border.Effect>
+            <Grid>
+                <Label x:Name="cardNumber" Content="**** **** **** 1234" FontSize="20" Margin="10,10,10,125" />
+                <Label x:Name="balanceLabel" Content="7 500 BYN" FontWeight="SemiBold" FontSize="25" Margin="10,50,10,70" />
+                <Border Margin="10,102,10,10" CornerRadius="20,20,20,20" Background="#FFCBCBCB" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
+                    <Grid>
+                        <Label x:Name="hideBalanceLabel"  FontWeight="DemiBold" Content="Скрыть остаток" FontSize="20"/>
+                        <Button Opacity="0.01" Click="HideBalance_Click" Margin="-11,-10,-9,-10" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <!---->
+        <Border Margin="268,82,30,475" CornerRadius="20,20,20,20" Background="#FFCBCBCB">
+            <Grid>
+                <!--1-->
+                <Border CornerRadius="50" Background="#FF9D1314" Margin="17,19,805,19" Height="80" Width="80">
+                    <Label Content="1" FontSize="40" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </Border>
+                <Label Content="Номер карты &#xD;&#xA;получателя" Margin="96,0,560,0" VerticalAlignment="Center" FontSize="30" FontWeight="DemiBold" Foreground="#FF9D1314" Height="98"/>
+                <Border Background="#FFA4A4A4" Margin="307,19,582,19" CornerRadius="5,5,5,5"/>
+                <!--ЛИНИЯ-->
+                <!--2-->
+                <Border CornerRadius="50" Background="#FFA4A4A4" Margin="337,19,485,19" Height="80" Width="80">
+                    <Label Content="2" FontSize="40" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </Border>
+                <Label Content="Ввод &#xD;&#xA;суммы" Margin="420,0,332,0" FontSize="30" FontWeight="DemiBold" Foreground="#FFA4A4A4" Height="88" VerticalAlignment="Center"/>
+                <!--3-->
+                <Border CornerRadius="50" Background="#FFA4A4A4" Margin="565,23,257,15" Height="80" Width="80">
+                    <Label Content="3" FontSize="40" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </Border>
+                <Label Content="Подтверждение" Margin="650,0,14,0" FontSize="30" FontWeight="DemiBold" Foreground="#FFA4A4A4" Height="54" VerticalAlignment="Center"/>
+                <Border Background="#FFA4A4A4" Margin="534,19,355,19" CornerRadius="5,5,5,5" Width="13"/>
+
+            </Grid>
+        </Border>
+        <Border Margin="268,222,30,56" CornerRadius="20,20,20,20" Background="#FFCBCBCB">
+            <Grid>
+                <Label Content="Введите номер карты получателя" FontSize="35" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0,60,0,0"/>
+                <TextBox x:Name="cardNumberTBox" Text="1231231231231231" Background="White" Width="600" Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="45" TextAlignment="Center"/>
+                <Button x:Name="nextPageButton" Click="nextPageButton_Click" Height="50" Width="50" Content="✔" FontSize="26" HorizontalAlignment="Left" Margin="680,174,0,173"/>
+
+                <Button x:Name="Button_1" Click="keyboard_Click" Height="69" Width="46.5" Margin="151,274,704,0" Content="1" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_2" Click="keyboard_Click" Height="69" Width="46.5" Margin="215,274,640,0" Content="2" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_3" Click="keyboard_Click" Height="69" Width="46.5" Margin="278,274,578,0" Content="3" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_4" Click="keyboard_Click" Height="69" Width="46.5" Margin="341,274,514,0" Content="4" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_5" Click="keyboard_Click" Height="69" Width="46.5" Margin="404,274,451,0" Content="5" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_6" Click="keyboard_Click" Height="69" Width="46.5" Margin="464,274,391,0" Content="6" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_7" Click="keyboard_Click" Height="69" Width="46.5" Margin="526,274,329,0" Content="7" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_8" Click="keyboard_Click" Height="69" Width="46.5" Margin="588,274,267,0" Content="8" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_9" Click="keyboard_Click" Height="69" Width="46.5" Margin="646,274,209,0" Content="9" FontSize="40" VerticalAlignment="Top"/>
+                <Button x:Name="Button_0" Click="keyboard_Click" Height="69" Width="46.5" Margin="704,274,151,0" Content="0" FontSize="40" VerticalAlignment="Top"/>
+
+
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

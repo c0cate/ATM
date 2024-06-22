@@ -1,0 +1,63 @@
+﻿<Window x:Class="ATM.offerForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATM"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Icon="D:\\!studying\\!C#\\ATM — копия\\ATM\\Resources\\mainLogo.ico"
+        Title="offerForm" Height="675" Width="1200">
+    <Grid>
+        <Image Source="D:\!studying\!C#\ATM\ATM\Resources\logo.jpg" Margin="10,-23,885,573"/>
+        <Label Content="Подача заявки" FontSize="30" FontWeight="Medium" Margin="10,58,932,503"/>
+        <Label Content="+375 (25) 999-99-69" FontSize="20" FontWeight="Medium" Margin="971,10,0,575"/>
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,550,0,0" CornerRadius="20,20,20,20" Background="#FFCBCBCB" VerticalAlignment="Top" HorizontalAlignment="Left" Height="69" Width="208">
+            <Label x:Name="QuitLabel" FontSize="25" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Center">Отмена</Label>
+        </Border>
+        <Button Opacity="0.01" Margin="10,550,982,40" Click="Button_Click_2" />
+
+
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,222,0,0" CornerRadius="20,20,20,20" Background="White" VerticalAlignment="Top" HorizontalAlignment="Left" Height="167" Width="208">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="1.8"/>
+            </Border.Effect>
+            <Grid>
+                <Label x:Name="cardNumberLabel" Content="**** **** **** 1234" FontSize="20" Margin="10,10,10,125" />
+                <Label x:Name="balanceLabel" Content="7 000 BYN" FontWeight="SemiBold" FontSize="25" Margin="10,50,10,70" />
+                <Border Margin="10,102,10,10" CornerRadius="20,20,20,20" Background="#FFCBCBCB" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
+                    <Grid>
+                        <Label x:Name="hideBalanceLabel" FontWeight="DemiBold" Content="Скрыть остаток" FontSize="20"/>
+                        <Button Opacity="0.01" Click="HideBalance_Click" Margin="-11,-10,-9,-10" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <!---->
+        <Border Width="900" Height="550" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="40" CornerRadius="20" Background="#FFBCBCBC">
+            <Grid>
+                <Grid Height="100" VerticalAlignment="Top" Margin="15">
+                    <Label Margin="10,0,0,0" Content="ФИО" FontSize="25" FontWeight="DemiBold" Foreground="Black"/>
+                    <TextBox x:Name="nameTB" Text="Иванов Иван Иванович" TextAlignment="left" FontSize="30" Width="850" Height="50" VerticalAlignment="Bottom" Margin="10" Background="White"/>
+                </Grid>
+                <Grid Width="600" Height="400" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15">
+                    <Label Margin="10,0,0,0" Content="О себе" FontSize="25" FontWeight="DemiBold" Foreground="Black"/>
+                    <TextBox x:Name="descriptionTB" Text="Иванов Иван Иванович" TextAlignment="left" TextWrapping="Wrap" FontSize="30" Width="850" Height="345" VerticalAlignment="Bottom" Margin="10" Background="White"/>
+                </Grid>
+                <Grid Width="250" Height="400"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15">
+                    <Label Margin="10,0,0,0" Content="Стаж работы" FontSize="25" FontWeight="DemiBold" Foreground="Black"/>
+                    <TextBox x:Name="workingXpTB" Text="10 лет" TextAlignment="left" TextWrapping="Wrap" FontSize="30" Width="230" Height="50" VerticalAlignment="Top" Margin="10,50,10,10" Background="White"/>
+            
+                    <Label Margin="10,110,0,0" Content="Дата рождения" FontSize="25" FontWeight="DemiBold" Foreground="Black"/>
+                    <TextBox x:Name="birthdayTB" Text="10.12.2000" TextAlignment="left" TextWrapping="Wrap" FontSize="30" Width="230" Height="50" VerticalAlignment="Top" Margin="10,160,10,10" Background="White"/>
+            
+                    <Label Margin="10,220,0,0" Content="Номер телефона" FontSize="25" FontWeight="DemiBold" Foreground="Black"/>
+                    <TextBox x:Name="phoneTB" Text="25 384-25-25" TextAlignment="left" TextWrapping="Wrap" FontSize="30" Width="230" Height="50" VerticalAlignment="Top" Margin="10,270,10,10" Background="White"/>
+
+                    <Button x:Name="makeAnOfferButton" Click="makeAnOfferButton_Click" Height="55" VerticalAlignment="Bottom" Margin="0,0,0,10" Background="#FF9D1314" Content="Подать заявку" FontWeight="DemiBold" FontSize="25" Foreground="#FFFFE2E2"/>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

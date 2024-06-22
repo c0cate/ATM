@@ -1,0 +1,74 @@
+﻿<Window x:Class="ATM.settingsForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATM"
+        mc:Ignorable="d"
+        Icon="D:\\!studying\\!C#\\ATM — копия\\ATM\\Resources\\mainLogo.ico"
+        WindowStartupLocation="CenterScreen"
+        Title="settingsForm" Height="675" Width="1200">
+    <Grid>
+        <Image Source="D:\!studying\!C#\ATM\ATM\Resources\logo.jpg" Margin="10,-23,885,573"/>
+        <Label Content="Главное окно" FontSize="30" FontWeight="Medium" Margin="10,58,932,503"/>
+        <Label Content="+375 (25) 999-99-69" FontSize="20" FontWeight="Medium" Margin="971,10,0,575"/>
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,550,0,0" CornerRadius="20,20,20,20" Background="#FFCBCBCB" VerticalAlignment="Top" HorizontalAlignment="Left" Height="69" Width="208">
+            <Label x:Name="QuitLabel" FontSize="25" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Center">Отмена</Label>
+        </Border>
+        <Button Opacity="0.01" Margin="10,550,982,40" Click="Button_Click_2" />
+
+
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,222,0,0" CornerRadius="20,20,20,20" Background="White" VerticalAlignment="Top" HorizontalAlignment="Left" Height="167" Width="208">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="1.8"/>
+            </Border.Effect>
+            <Grid>
+                <Label x:Name="cardNumberLabel" Content="**** **** **** 1234" FontSize="20" Margin="10,10,10,125" />
+                <Label x:Name="balanceLabel" Content="7 000 BYN" FontWeight="SemiBold" FontSize="25" Margin="10,50,10,70" />
+                <Border Margin="10,102,10,10" CornerRadius="20,20,20,20" Background="#FFCBCBCB" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
+                    <Grid>
+                        <Label x:Name="hideBalanceLabel" FontWeight="DemiBold" Content="Скрыть остаток" FontSize="20"/>
+                        <Button Opacity="0.01" Click="HideBalance_Click" Margin="-11,-10,-9,-10" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <!---->
+        <Border Width="900" Height="540" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="40" CornerRadius="20" Background="#FFBCBCBC">
+            <Grid>
+                <Border Background="White" CornerRadius="10,10,0,0" Height="105" Width="850" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0">
+                    <Grid>
+                        <Label Content="Закрыть свой счет*" FontSize="30" Margin="10" FontWeight="DemiBold" Height="55" VerticalAlignment="Top"/>
+                        <Label Content="закрытие работа счета без возможности его восстановления" FontSize="19" Margin="10" FontWeight="DemiBold" Height="35" VerticalAlignment="Bottom" Foreground="#FF8E8E8E"/>
+                    
+                    </Grid>
+                </Border>
+                <Grid Background="White" Height="105" Width="850" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0">
+                    <Label Content="Продлить срок действия карты" FontSize="30" Margin="10" FontWeight="DemiBold" Height="55" VerticalAlignment="Top"/>
+                    <Label Content="продление работы счета на произвольное количество лет" FontSize="19" Margin="10" FontWeight="DemiBold" Height="35" VerticalAlignment="Bottom" Foreground="#FF8E8E8E"/>
+
+                </Grid>
+                <Grid Background="White" Height="105" Width="850" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,280,0,0">
+                    <Label Content="Изменение пароля" FontSize="30" Margin="10" FontWeight="DemiBold" Height="55" VerticalAlignment="Top"/>
+                    <Label Content="изменение индивидуального пароля карточки" FontSize="19" Margin="10" FontWeight="DemiBold" Height="35" VerticalAlignment="Bottom" Foreground="#FF8E8E8E"/>
+
+                </Grid>
+                <Border Background="White" CornerRadius="0,0,10,10" Height="105" Width="850" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,410,0,0">
+                    <Grid>
+                        <Label Content="Получение номера CVC/CVV" FontSize="30" Margin="10" FontWeight="DemiBold" Height="55" VerticalAlignment="Top"/>
+                        <Label Content="получить номера подлинности платежной системы " FontSize="19" Margin="10" FontWeight="DemiBold" Height="35" VerticalAlignment="Bottom" Foreground="#FF8E8E8E"/>
+
+                    </Grid>
+                </Border>
+
+                <Button x:Name="closeCardButton" Click="closeCardButton_Click" Opacity="0.01" Margin="25,20,25,415" Panel.ZIndex="10"/>
+                <Button x:Name="changeDateButton" Click="changeDateButton_Click" Opacity="0.01" Margin="25,150,25,285" Panel.ZIndex="10"/>
+                <Button x:Name="changePassButton" Click="changePassButton_Click" Opacity="0.01" Margin="25,280,25,155" Panel.ZIndex="10"/>
+                <Button x:Name="changeCVCButton" Click="changeCVCButton_Click" Opacity="0.01" Margin="25,410,25,25" Panel.ZIndex="10"/>
+                
+            </Grid>
+        </Border>
+
+
+    </Grid>
+</Window>

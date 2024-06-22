@@ -1,0 +1,31 @@
+DR_EXPLAIN = DR_EXPLAIN || {};
+DR_EXPLAIN.searchIndex = DR_EXPLAIN.searchIndex || {};
+DR_EXPLAIN.searchIndex.prefixes = [
+	{ "fileName": "0xu0031.js", "first": "1", "last": "15" },
+	{ "fileName": "0xu0032.js", "first": "2", "last": "2024" },
+	{ "fileName": "0xu0033.js", "first": "3", "last": "3" },
+	{ "fileName": "0xu0034.js", "first": "4", "last": "4" },
+	{ "fileName": "0xu0035.js", "first": "5", "last": "5" },
+	{ "fileName": "0xu0043.js", "first": "CVC", "last": "CVV" },
+	{ "fileName": "0xu0410.js", "first": "А", "last": "АТВТОРИЗАЦИЯ" },
+	{ "fileName": "0xu0411.js", "first": "Б", "last": "БУДУТ" },
+	{ "fileName": "0xu0412.js", "first": "В", "last": "ВЫШЕ" },
+	{ "fileName": "0xu0413.js", "first": "ГДЕ", "last": "ГЛАВНОЕ" },
+	{ "fileName": "0xu0414.js", "first": "ДАЛЕЕ", "last": "ДЛЯ" },
+	{ "fileName": "0xu0415.js", "first": "ЕСТЬ", "last": "ЕСТЬ" },
+	{ "fileName": "0xu0417.js", "first": "ЗАВЕРШАЕТ", "last": "ЗДЕСЬ" },
+	{ "fileName": "0xu0418.js", "first": "И", "last": "ИНФОРМАЦИЯ" },
+	{ "fileName": "0xu041a.js", "first": "КАК", "last": "КОТОРЫЕ" },
+	{ "fileName": "0xu041b.js", "first": "ЛИЧНОСТЬ", "last": "ЛИЧНЫЙ" },
+	{ "fileName": "0xu041c.js", "first": "МОЖНО", "last": "МОЖНО" },
+	{ "fileName": "0xu041d.js", "first": "НА", "last": "НОМЕРА" },
+	{ "fileName": "0xu041e.js", "first": "О", "last": "ОШИБКИ" },
+	{ "fileName": "0xu041f.js", "first": "ПАРАМЕТРОВ", "last": "ПУТЕМ" },
+	{ "fileName": "0xu0420.js", "first": "Р", "last": "РУКОВОДСТВО" },
+	{ "fileName": "0xu0421.js", "first": "С", "last": "СЧЕТА" },
+	{ "fileName": "0xu0422.js", "first": "ТАКИЕ", "last": "ТЕЛЕФОНА" },
+	{ "fileName": "0xu0423.js", "first": "УСЛУГИ", "last": "УСЛУГИ" },
+	{ "fileName": "0xu0424.js", "first": "ФОРМ", "last": "ФУНКЦИОНАЛ" },
+	{ "fileName": "0xu0427.js", "first": "ЧЕГО", "last": "ЧТОБЫ" },
+	{ "fileName": "0xu042d.js", "first": "ЭЛЕМЕНТ", "last": "ЭТАПОМ" }
+];

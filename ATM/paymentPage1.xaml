@@ -1,0 +1,86 @@
+﻿<Page x:Class="ATM.paymentPage1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ATM"
+      mc:Ignorable="d" 
+      d:DesignHeight="675" d:DesignWidth="1200"
+      Background="white"
+      Title="paymentPage1">
+    <Grid>
+        <Image Source="D:\!studying\!C#\ATM\ATM\Resources\logo.jpg" Margin="10,-23,885,573"/>
+        <Label Content="Оплата &#xD;&#xA;платежей" FontSize="30" FontWeight="Medium" Margin="10,58,932,482"/>
+        <Label Content="+375 (25) 999-99-69" FontSize="20" FontWeight="Medium" Margin="971,10,0,575"/>
+
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,550,0,0" CornerRadius="20,20,20,20" Background="#FFCBCBCB" VerticalAlignment="Top" HorizontalAlignment="Left" Height="69" Width="208">
+            <Grid>
+                <Label x:Name="QuitLabel1" FontSize="25" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,1,0,0" Height="39" RenderTransformOrigin="0.499,0.226">Назад</Label>
+                <Label x:Name="QuitLabel" FontSize="18" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,32,0,0" Height="39" RenderTransformOrigin="0.499,0.226" Foreground="#FF797777">Главная страница</Label>
+            </Grid>
+        </Border>
+        <Button Opacity="0.01" Panel.ZIndex="10" Margin="10,550,982,56" Click="Button_Click_2" />
+
+        <Border BorderBrush="White" BorderThickness="0" Margin="10,222,0,0" CornerRadius="20,20,20,20" Background="White" VerticalAlignment="Top" HorizontalAlignment="Left" Height="167" Width="208">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="1.8"/>
+            </Border.Effect>
+            <Grid>
+                <Label x:Name="cardNumber" Content="**** **** **** 1234" FontSize="20" Margin="10,10,10,125" />
+                <Label x:Name="balanceLabel" Content="7 500 BYN" FontWeight="SemiBold" FontSize="25" Margin="10,50,10,70" />
+                <Border Margin="10,102,10,10" CornerRadius="20,20,20,20" Background="#FFCBCBCB" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="10">
+                    <Grid>
+                        <Label  x:Name="hideBalanceLabel" FontWeight="DemiBold" Content="Скрыть остаток" FontSize="20"/>
+                        <Button Opacity="0.01" Click="HideBalance_Click" Margin="-11,-10,-9,-10" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+        <!---->
+        <Grid Margin="331,80,36,56">
+            <Grid Width="390" Height="150" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFCBCBCB">
+                <Label Height="60" VerticalAlignment="Top" Content="  Мобильная связь" FontSize="35" FontWeight="DemiBold"/>
+                <Label Height="90" VerticalAlignment="Bottom" Content="Оплата по номеру операторов&#xD;&#xA;life, a1, MTC." FontSize="25" FontWeight="Regular"/>
+                <Button x:Name="button1" Click="button1_Click" Opacity="0.01" Panel.ZIndex="10"/>
+            </Grid>
+            
+            <Grid Width="390" Height="150" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FFCBCBCB">
+                <Label Height="60" VerticalAlignment="Top" Content="  ЖКХ / ЖКУ" FontSize="35" FontWeight="DemiBold"/>
+                <Label Height="90" VerticalAlignment="Bottom" Content="Оплата жилищно- &#xD;&#xA; коммунальных услуг" FontSize="25" FontWeight="Regular"/>
+                <Button x:Name="button2" Click="buttonSelect_Click" Opacity="0.01" Panel.ZIndex="10"/>
+
+            </Grid>
+            
+            <Grid Width="390" Height="150" VerticalAlignment="Center" HorizontalAlignment="Left" Background="#FFCBCBCB">
+                <Label Height="60" VerticalAlignment="Top" Content="  Интернет, телевидение" FontSize="30" FontWeight="DemiBold"/>
+                <Label Height="90" VerticalAlignment="Bottom" Content="Оплата домашнего &#xD;&#xA;и не только интернета" FontSize="25" FontWeight="Regular"/>
+                <Button x:Name="button3" Click="buttonSelect_Click" Opacity="0.01" Panel.ZIndex="10"/>
+
+            </Grid>
+            
+            <Grid Width="390" Height="150" VerticalAlignment="Center" HorizontalAlignment="Right" Background="#FFCBCBCB">
+                <Label Height="60" VerticalAlignment="Top" Content="  Оплата налогов" FontSize="35" FontWeight="DemiBold"/>
+                <Label Height="90" VerticalAlignment="Bottom" Content="Налог на прибыль, акцизы, &#xD;&#xA;налог на недвижимость и др." FontSize="25" FontWeight="Regular"/>
+                <Button x:Name="button4" Click="buttonSelect_Click" Opacity="0.01" Panel.ZIndex="10"/>
+
+            </Grid>
+            
+            <Grid Width="390" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="#FFCBCBCB">
+                <Label Height="60" VerticalAlignment="Top" Content="  Оплата штрафов" FontSize="35" FontWeight="DemiBold"/>
+                <Label Height="90" VerticalAlignment="Bottom" Content="Оплата штрафов за нарушение&#xD;&#xA;ПДД, ДЦП и другое" FontSize="25" FontWeight="Regular"/>
+                <Button x:Name="button5" Click="buttonSelect_Click" Opacity="0.01" Panel.ZIndex="10"/>
+
+            </Grid>
+            
+            <Grid Width="390" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="#FFCBCBCB">
+                <Label Height="60" VerticalAlignment="Top" Content="  Образование и развитие" FontSize="30" FontWeight="DemiBold"/>
+                <Label Height="90" VerticalAlignment="Bottom" Content="Оплата автошкол, ВУЗ, &#xD;&#xA;школьное питание, ПТО и др." FontSize="25" FontWeight="Regular"/>
+                <Button x:Name="button6" Click="buttonSelect_Click" Opacity="0.01" Panel.ZIndex="10"/>
+
+            </Grid>
+            
+            
+        </Grid>
+        
+    </Grid>
+</Page>
